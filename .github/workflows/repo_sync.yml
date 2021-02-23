@@ -1,8 +1,8 @@
 # File: .github/workflows/repo-sync.yml
-name: sync-Sunert-scripts
+name: sync-xxx-scripts
 on:
   schedule:
-    - cron: '1 0,12,22 * * *'
+    - cron: '0 */4 * * *'
   workflow_dispatch:
   watch:
     types: started
@@ -24,9 +24,9 @@ jobs:
         uses: repo-sync/github-sync@v2
         if: env.PAT
         with:
-          source_repo: "https://github.com/canghaiyishengxiao2021/dadonggua.git"
+          source_repo: "https://github.com/ziye66666/JavaScript.git"
           source_branch: "main"
-          destination_branch: "master"
+          destination_branch: "main"
           github_token: ${{ secrets.PAT }}
       # 我自己同步到gitee使用，其他人可忽略
       - name: sync github -> gitee
