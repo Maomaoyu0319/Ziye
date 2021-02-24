@@ -26,7 +26,7 @@ jobs:
       - name: '运行 【聚看点】'
         if: env.BBB_bububaoTOKEN
         run: |
-          node Task/bububao.js
+          node bububao.js
         env:
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
